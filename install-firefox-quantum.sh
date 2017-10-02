@@ -15,17 +15,16 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ################################################################################
-# Usage example: ./install.sh /opt beta en-US
+# Usage example: ./install-firefox-quantum.sh /opt beta en-US
 #
-# arg1 - Install dir (/opt by default)
-# arg2 - Firefox Quantum edition: beta, devedition or nightly (beta by default)
-# arg3 - Language code (en-US by default)
+# arg1 - Firefox Quantum edition: beta, devedition or nightly (beta by default)
+# arg2 - Language code (en-US by default)
 ################################################################################
 
-INSTALL_DIR=${1:-/opt}
-EDITION=${2:-beta}
-LANGUAGE=${3:-en-US}
+EDITION=${1:-beta}
+LANGUAGE=${2:-en-US}
 
+INSTALL_DIR=/opt
 TAR_URL="https://download.mozilla.org/?product=firefox-$EDITION-latest-ssl&os=linux64&lang=$LANGUAGE"
 INSTALL_PATH=$INSTALL_DIR/firefox-quantum-$EDITION
 
