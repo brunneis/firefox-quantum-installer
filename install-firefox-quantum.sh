@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ################################################################################
-# Usage example: ./install-firefox-quantum.sh /opt beta en-US
+# Usage example: ./install-firefox-quantum.sh beta en-US
 #
 # arg1 - Firefox Quantum edition: beta, devedition or nightly (beta by default)
 # arg2 - Language code (en-US by default)
