@@ -17,15 +17,21 @@
 ################################################################################
 # Usage example: ./install-firefox-quantum.sh beta en-US
 #
-# arg1 - Firefox Quantum edition: beta, devedition or nightly (beta by default)
+# arg1 - Firefox Quantum edition: latest (default), beta, devedition or nightly
 # arg2 - Language code (en-US by default)
 ################################################################################
 
-EDITION=${1:-beta}
+EDITION=${1:-latest}
 LANGUAGE=${2:-en-US}
 
+if [ $EDITION == "latest" ]; then
+    EDITION_PREFIX=""
+else
+    EDITION_PREFIX=$EDITION-
+fi
+
 INSTALL_DIR=/opt
-TAR_URL="https://download.mozilla.org/?product=firefox-$EDITION-latest-ssl&os=linux64&lang=$LANGUAGE"
+TAR_URL="https://download.mozilla.org/?product=firefox-"$EDITION_PREFIX"latest-ssl&os=linux64&lang=$LANGUAGE"
 INSTALL_PATH=$INSTALL_DIR/firefox-quantum-$EDITION
 
 # Download & install Firefox Quantum
